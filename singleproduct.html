@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+     <!-- navbar -->
+     <!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>admin Dashboard11</title>
@@ -25,9 +58,7 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
-
   <link rel="stylesheet" href="style.css">
-  
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -195,7 +226,7 @@
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="TO Search the Complete number" aria-label="Search">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
               <i class="fas fa-search fa-fw"></i>
@@ -265,66 +296,116 @@
   </aside>
   <!-- /.control-sidebar -->
 </div>
+
+
 <!-- ./wrapper -->
-
-
-
-<!-- Search form -->
-<div class="container mt-4">
-    <form class="form-inline active-cyan-3 active-cyan-4">
-        <i class="fas fa-search" aria-hidden="true"></i>
-        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-          aria-label="Search">
-      </form>
-</div>
-
-<!-- table -->
+   <!-- form -->
+<div class="col-xs-12 bg-light">
 <div class="container">
-
-<div class=" table bg-light gray mt-4 ml-auto">
-    <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Product Name</th>
-        <th scope="col">Product Option</th>
-        <th scope="col">Product Category</th>
-        <th scope="col">Tax Group</th>
-        <th scope="col">Product Price</th>
-        <th scope="col">Sort Order</th>
-
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td><a href="/singleproduct.html">Burger</a></td>
-          <td>-</td>
-          <td>General</td>
-          <td>Zero Tax Group</td>
-          <td>75.00</td>
-          <td>-</td>
-      </tr>
-      <tr>
-        <td><a href="/singleproduct.html">Momo</a></td>
-          <td>-</td>
-          <td>General</td>
-          <td>Zero Tax Group</td>
-          <td>75.00</td>
-          <td>-</td>
-    </tr>
-    <tr>
-      <td><a href="/singleproduct.html">Pizza</a></td>
-          <td>-</td>
-          <td>General</td>
-          <td>Zero Tax Group</td>
-          <td>75.00</td>
-          <td>-</td>
-  </tr>
-    </tbody>
-  </table>
+    <div class="row align-items-start mt-2">
+      <div class="col-xs-12 col-md-4 mt-4 p-4">
+        <span class="text-aligncenter"><b>Product Details</b></span><br>
+        <p class="text-aligncenter mt-2 text-gray">Edit your product details here. Product <br> name should be unique.</p>        </div>
+      <div class="col-xs-12 col-md-8  mt-4 bg-white">
+        <form class="p-4">
+            <div class="mb-3">
+              <label for="exampleInputtext" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="productname" placeholder="Product name">
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputtext" class="form-label">Product Category</label>
+                <input type="text" class="form-control" id="productcategory" placeholder="General">
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputtext" class="form-label">Tax Group</label>
+                <select class="custom-select mr-sm-2" id="taxgroup">
+                    <option value="1">Select Tax Group</option>
+                    <option value="2">Zero Tax Group</option>
+                </select>
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputtext" class="form-label">Product Price</label>
+                <input type="number" class="form-control" id="productprice"placeholder="Product Price">
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <button type="submit" class="btn btn-secondary mb-2">Go Back</button>
+            <button type="submit" class="btn btn-success mb-2">Save</button>
+        </form>
+    </div>
 </div>
+   <!-- form -->
+
+    <div class="row align-items-start  mt-4">
+      <div class="col-xs-12 col-md-4  mt-4 p-4">
+        <span class="text-aligncenter"><b>Product Option</b></span><br>
+        <p class="text-aligncenter mt-2 text-gray">You can add one ore more variant<br>groups and an add-on group to the<br> product.</p>  
+      </div>
+      <div class="col-xs-12 col-md-8 mt-4 bg-white p-4">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Regular</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Combo</label>
+          </div>
+          
+          <div class="mt-2 p-2">
+                    <span class="text-blue mt-3 p-2">Add Combo Group</span><br>
+          </div>
+         <div class="mt-2 p-2">
+                    <button type="submit" class="btn btn-secondary mb-2">Go Back</button>
+                    <button type="submit" class="btn btn-success mb-2">Save</button>
+          </div>
+
+        </div>
+    </div>
+
+   
+        <div class="row align-items-start  mt-4">
+              <div class="col-xs-12 col-md-4  mt-4 p-4">
+                <span class="text-aligncenter"><b>Additional Details</b></span><br>
+                <p class="text-aligncenter mt-2 text-gray">Additional details about the product.</p>                
+              </div>
+            <div class="col-xs-12 col-md-8  mt-4 bg-white mb-4">
+                <form class="p-4">
+                    <div class="mb-3">
+                      <label for="exampleInputtext" class="form-label">Unit Of Measure</label>
+                      <input type="text" class="form-control" id="unitofmeasure" placeholder="Unit of Measure(optional)">
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputtext" class="form-label">Product Code</label>
+                        <input type="text" class="form-control" id="productcode" placeholder="Product Code(optional)">
+                        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputtext" class="form-label">Notes</label>
+                        <input type="text" class="form-control" id="notes" placeholder="Notes(optional)">
+                        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputtext" class="form-label">Limit to Register</label>
+                        <select class="custom-select mr-sm-2" id="taxgroup">
+                            <option value="1">All Register</option>
+                            <option value="2">Main Register</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputtext" place class="form-label">Set Order</label>
+                        <input type="number" class="form-control" id="setorder" placeholder="Set Order (optional)">
+                    </div>
+                    <button type="submit" class="btn btn-secondary mb-2">Go Back</button>
+                    <button type="submit" class="btn btn-success mb-2">Save</button>
+                </form>
+              </div>
+    </div>
 </div>
 
-<!-- jQuery -->
+ <!-- jQuery --> 
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
@@ -358,5 +439,34 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+    <!-- form -->
+    <!-- <div class="container bg-light-gray">
+        <div class="row align-items-start">
+              <div class="col-4  mt-4">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non alias, nam esse cum amet architecto obcaecati consequuntur odio praesentium possimus dicta numquam voluptatibus dolorem omnis inventore odit molestias soluta quisquam.
+              </div>
+            <div class="col-8  mt-4">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+              </div>
+         </div>
+     -->
