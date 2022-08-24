@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 .food-items{
   display: flex;
     width: 100px;
